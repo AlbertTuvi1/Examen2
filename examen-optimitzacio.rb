@@ -8,24 +8,24 @@ class Person
     @gender = gender
   end
 
+  #Estava mal ordenat
   def grow
     @age = @age + 1
   end
 end
 
-def mitjana (treballadors)
+#Aqui he tret la longitud 
+
+# I he fet que la mitjana la calculava malament i he fet que només la calculi quan la imprimeix.  
+
+def mitjana(treballadors, longitut)
   age = 0
-  longitut = 1
-  mitjana = 0
-  treballadors.each do |treballador|
-    age += treballador.age.to_i
-    longitut += 1; 
-    mitjana = age/longitut
-  end 
+    treballadors.each do |treballador|
+        age += treballador.age.to_i
+end 
+  mitjana = age/longitut  
   mitjana 
 end
-
-
 
 treballadors = []
 
@@ -35,7 +35,13 @@ treballadors.push(Person.new("David", 63, :male))
 treballadors.push(Person.new("Laura", 34, :female))
 treballadors.push(Person.new("Lidia", 29, :female))
 
-puts mitjana(treballadors)
+#I he guardat la longitud despres de l'array i ho guarda a una variable
+
+longitut = treballadors.length
+
+#Calucla la mitjana i la mostra
+
+puts mitjana(treballadors, longitut)
 
 puts "passat un any"
 
@@ -43,5 +49,5 @@ treballadors.each do |treballador|
   treballador.grow
 end
 
-puts mitjana(treballadors)
+puts mitjana(treballadors , longitut)
 
