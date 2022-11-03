@@ -1,7 +1,21 @@
+#Autor :: Albert Tubert Viñas
+#
+# == Exemple
+#Aquest codi funciona per 
+#-Calcular la mitja
+#-Sumar un any més
+#
+# === Clase Person
+# *metode initialize
+# *metode mitjana
+
+
 class Person
   attr_accessor :name, :gender
   attr_reader :age
-
+  
+  
+  # @return [String, Integer, String]
   def initialize(name, initial_age, gender)
     @name = name
     @age = initial_age
@@ -18,6 +32,7 @@ end
 
 # I he fet que la mitjana la calculava malament i he fet que només la calculi quan la imprimeix.  
 
+#@return [Integer, Integer]
 def mitjana(treballadors, longitut)
   age = 0
     treballadors.each do |treballador|
@@ -49,5 +64,6 @@ treballadors.each do |treballador|
   treballador.grow
 end
 
+#@type [Integer, Integer]
 puts mitjana(treballadors , longitut)
 
